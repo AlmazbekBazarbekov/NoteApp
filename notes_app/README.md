@@ -1,17 +1,24 @@
-# notes_app
+# Notes App 📝
 
-A new Flutter project.
+Мобильное приложение для создания и управления заметками с облачной синхронизацией, разработанное на **Flutter**.
 
-## Getting Started
+##  Функционал
+* **CRUD-операции:** создание, просмотр, редактирование и удаление заметок (свайпом влево)[cite: 3].
+* **Закрепление (Pin):** важные заметки можно закрепить вверху списка[cite: 3].
+* **Живой поиск:** мгновенная фильтрация заметок по тексту и заголовку[cite: 3].
+* **Облачное хранение:** все данные синхронизируются с базой данных в реальном времени[cite: 3].
 
-This project is a starting point for a Flutter application.
+##  Стек технологий и архитектура
+* **Фреймворк:** Flutter / Dart
+* **Управление состоянием (State Management):** `flutter_bloc` + `equatable`
+* **Бэкенд и База данных:** Supabase (`supabase_flutter`) — PostgreSQL[cite: 3]
+* **Архитектура:** слоистая (Clean-inspired):
+    * `lib/core/` — конфигурация и константы
+    * `lib/data/` — модели данных и репозитории для работы с Supabase
+    * `lib/bloc/` — бизнес-логика, события и состояния приложения
+    * `lib/presentation/` — экраны и UI-виджеты
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Как запустить проект локально
+1. Клонировать репозиторий:
+   ```bash
+   git clone https://github.com/AlmazbekBazarbekov/NoteApp
